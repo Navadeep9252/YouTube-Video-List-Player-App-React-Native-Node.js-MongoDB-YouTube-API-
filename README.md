@@ -67,11 +67,11 @@ const res = await axios.get('http://<YOUR_PC_IP>:5000/api/videos');
 
 ** Use correct IP depending on where you run:
 
-Android Emulator → http://10.0.2.2:5000/api/videos
+Android Emulator > http://10.0.2.2:5000/api/videos
 
-Expo Go on phone → http://<your-computer-LAN-ip>:5000/api/videos
+Expo Go on phone > http://<your-computer-LAN-ip>:5000/api/videos
 
-Web (optional) → http://localhost:5000/api/videos
+Web (optional) > http://localhost:5000/api/videos
 
 Start the client:
 
@@ -92,7 +92,7 @@ You can go back and play another.
 
 Record this flow (≤2 minutes) as required.
 
-🛠️ Tech Stack
+** Tech Stack **
 
 Backend
 
@@ -116,4 +116,11 @@ react-native-youtube-iframe
 
 ** API Example **
 
-GET /api/videos → returns:
+GET /api/videos > returns:
+
+** Notes **
+- Only `videoId` is stored in MongoDB (no metadata).
+- Metadata is fetched at runtime via YouTube Data API.
+- Make sure to update the API URL in `client/screens/ListScreen.js` with your server IP.
+- MongoDB connection string is provided for review purposes.
+
